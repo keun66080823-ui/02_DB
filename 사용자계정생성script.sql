@@ -16,17 +16,17 @@
 ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
 -- 11G 이전 문법 사용 허용
 
-CREATE USER kh_hdk IDENTIFIED BY kh1234;
+CREATE USER workbook IDENTIFIED BY workbook;
 -- 계정 생성 구문(kh_hdk : USERNAME / kh1234 : Password)
 -- ORA-65096: 공통 사용자 또는 롤 이름이 부적합합니다. (11G 버전때만 해도 오류가 안 떴음. 그렇기에 위의 허용 구문이 필요.)
 -- 한 번 수행했는데 다시 수행하면 ORA-01920: 사용자명 'KH_HDK'(이)가 다른 사용자나 롤 이름과 상충됩니다 라는 오류가 나옴.
 
-GRANT RESOURCE, CONNECT TO kh_hdk;
+GRANT RESOURCE, CONNECT TO workbook;
 -- 사용자 계정에 권한 부여 설정
 -- RESOURCE : 테이블이나 인덱스 같은 DB 객체를 생성할 권한
 -- CONNECT : DB에 연결하고 로그인 할 수 있는 권한
 
-ALTER USER kh_hdk DEFAULT TABLESPACE SYSTEM QUOTA
+ALTER USER workbook DEFAULT TABLESPACE SYSTEM QUOTA
 UNLIMITED ON SYSTEM;
 -- 객체가 생성될 수 있는 공간 할당량을 무제한으로 지정하는 코드 (권한 부여 코드)
 

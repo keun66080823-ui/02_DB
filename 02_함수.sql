@@ -104,15 +104,15 @@ SELECT TRUNC(123.456, 1) FROM DUAL; -- 123.4, 소수점 첫째자리 아래 절�
 -- 25.10.20 월 수업 시작
 -- 날짜(DATE) 관련 함수
 
--- SYSDATE : 시스템 상의 현재 시간 (년, 월, 일, 시, 분, 초)을 반환
-SELECT SYSDATE FROM DUAL; -- 2025-10-20 09:14:51.000
-
--- SYSTIMESTAMP : SYSDATE + MS(밀리세크) 단위 추가(UTC 정보)
-SELECT SYSTIMESTAMP FROM DUAL; -- 2025-10-20 09:16:12.374 +0900
-
--- MONTHS_BTEWEEN(날짜, 날짜) : 두 날짜의 개월 수 차이 반환
-SELECT ABS(ROUND(MONTHS_BETWEEN(SYSDATE, '2026-02-27'), 1)) "수강 기간(개월)"
-FROM DUAL; -- 4.2
+	-- SYSDATE : 시스템 상의 현재 시간 (년, 월, 일, 시, 분, 초)을 반환
+	SELECT SYSDATE FROM DUAL; -- 2025-10-20 09:14:51.000
+	
+	-- SYSTIMESTAMP : SYSDATE + MS(밀리세크) 단위 추가(UTC 정보)
+	SELECT SYSTIMESTAMP FROM DUAL; -- 2025-10-20 09:16:12.374 +0900
+	
+	-- MONTHS_BTEWEEN(날짜, 날짜) : 두 날짜의 개월 수 차이 반환
+	SELECT ABS(ROUND(MONTHS_BETWEEN(SYSDATE, '2026-02-27'), 1)) "수강 기간(개월)"
+	FROM DUAL; -- 4.2
 
 -- EMPLOYEE 테이블에서
 -- 사원의 이름, 입사일, 근무한 개월수, 근무년차 조회
