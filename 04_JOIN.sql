@@ -140,7 +140,7 @@ WHERE DEPT_CODE = DEPT_ID(+);
 -- 반대쪽 테이블 컬럼(위 코드 상에선 WHERE의 DEPT_ID)에 (+) 기호 작성해야한다!
 
 
--- RIGHT [OUTER] JOIN : 합치기에 사용한 두 테이블 중
+-- 2) RIGHT [OUTER] JOIN : 합치기에 사용한 두 테이블 중
 -- 오른편에 기술된 테이블의 컬럼수를 기준으로 JOIN
 
 -- ANSI 표준
@@ -154,7 +154,7 @@ FROM EMPLOYEE , DEPARTMENT
 WHERE DEPT_CODE(+) = DEPT_ID;
 
 
--- FULL [OUTER] JOIN : 합치기에 사용한 두 테이블이 가진
+-- 3) FULL [OUTER] JOIN : 합치기에 사용한 두 테이블이 가진
 -- 모든 행을 결과에 포함
 -- ** 오라클 구문에는 FULL OUTER JOIN 사용 못함 **
 
